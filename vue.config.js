@@ -1,3 +1,4 @@
 module.exports = {
-    publicPath: '/wedding-site/'
+    publicPath: '/wedding-site/',
+    outputDir: '/docs',
 }
