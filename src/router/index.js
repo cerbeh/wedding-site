@@ -7,19 +7,14 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import('../views/Home.vue')
-  }, {
-    path: '/ceremony',
-    name: 'ceremony',
-    component: () => import('../views/Ceremony.vue')
-  }, {
-    path: '/party',
-    name: 'party',
-    component: () => import('../views/Party.vue')
-  }, {
-    path: '/charities',
-    name: 'charities',
-    component: () => import('../views/Charities.vue')
+    components: {
+      default: () => import('../views/Home.vue'),
+      home: () => import('../views/Home.vue'),
+      ceremony: () => import('../views/Ceremony.vue'),
+      party: () => import('../views/Party.vue'),
+      charities: () => import('../views/Charities.vue'),
+      accomodation: () => import('../views/Accomodation.vue')
+    }
   }
 ]
 
