@@ -29,13 +29,13 @@ export default {
         },
         {
           name: 'Access All Areas',
-          text: 'Award-winning, urban, disruptive performance by learning disabled and autistic artists. \n A charity close to us as Millie volunteered with them for a few years',
+          text: 'Award-winning, urban, disruptive performance by learning disabled and autistic artists. \n A charity close to us as Millie volunteered with them for years',
           imageLink: 'https://images.squarespace-cdn.com/content/55844d15e4b0550c95a92f5a/1544463987298-3Y2IPHPSFWOU4LMD2Y1H/AAA+Logo+Web.png?content-type=image%2Fpng',
           link: 'http://www.accessallareastheatre.org/'
         },
         {
           name: 'Planting Peace',
-          text: 'Planting Peace is a global nonprofit organization founded for the purpose of spreading peace in a hurting world. Our projects focus on a range of humanitarian and environmental initiatives, including our multi-national deworming campaign; a network of orphanages and safe havens in developing countries; LGBTQ rights advocacy; Equality House and Transgender House; and rainforest conservation efforts in the Amazon.',
+          text: 'Planting Peace is a global nonprofit organization founded for the purpose of spreading peace in a hurting world. Their projects focus on a range of humanitarian and environmental initiatives, including a multi-national deworming campaign; a network of orphanages and safe havens in developing countries; LGBTQ rights advocacy; Equality House and Transgender House and rainforest conservation efforts in the Amazon.',
           imageLink: 'https://www.plantingpeace.org/wp-content/uploads/2017/04/planting_peace_logo-web.png',
           link: 'https://www.plantingpeace.org/'
         },
