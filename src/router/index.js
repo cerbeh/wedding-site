@@ -8,12 +8,12 @@ const routes = [
     path: '/',
     name: 'home',
     components: {
-      default: () => import('../views/Home.vue'),
-      home: () => import('../views/Home.vue'),
-      ceremony: () => import('../views/Ceremony.vue'),
-      party: () => import('../views/Party.vue'),
-      charities: () => import('../views/Charities.vue'),
-      accomodation: () => import('../views/Accomodation.vue')
+      default: () => import('@/views/Home.vue'),
+      home: () => import('@/views/Home.vue'),
+      ceremony: () => import('@/views/Ceremony.vue'),
+      party: () => import('@/views/Party.vue'),
+      charities: () => import('@/views/Charities.vue'),
+      accomodation: () => import('@/views/Accomodation.vue')
     }
   }
 ]
