@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="column is-full">
+  <div class="column is-half-desktop is-full-tablet">
     <div class="columns is-vcentered is-mobile is-multiline">
       <div class="column is-3-tablet is-full-mobile">
         <figure class="image is-240x240">
