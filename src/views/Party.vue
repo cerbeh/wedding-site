@@ -8,39 +8,24 @@
           </h2>
         </div>
       </div>
-      <v-breakpoint>
-        <div slot-scope="scope">
-          <div class="card-image" v-if="scope.isSmall || scope.noMatch">
-            <figure class="image is-5by4">
-              <img
-              src="http://pubonthepark.com/wp-content/uploads/2017/06/Bears-Den.jpg"
-              alt="image of the bears den in pub on the park">
-            </figure>
-          </div>
-
-          <div class="card-image is-inline">
-            <figure class="image is-128x128" v-if="scope.isMedium">
-              <img src="http://pubonthepark.com/wp-content/uploads/2017/06/Bears-Den.jpg" alt="image of the bears den in pub on the park">
-            </figure>
-
-            <figure class="image is-128x128" v-if="scope.isMedium">
-              <img src="http://pubonthepark.com/wp-content/uploads/2017/06/Bears-Den.jpg" alt="image of the bears den in pub on the park">
-            </figure>
-          </div>
-
+        <div class="card-image">
+          <figure class="image is-5by4">
+            <img
+            src="http://pubonthepark.com/wp-content/uploads/2017/06/Bears-Den.jpg"
+            alt="image of the bears den in pub on the park">
+          </figure>
         </div>
-      </v-breakpoint>
       <div class="card-content">
         <h3 class="title">6pm - Late</h3>
         <div class="content">
           <p>
             <span class="has-text-weight-semibold">Where?</span>
-            19 Martello Street, London, E8 3PE
+            The Pub on the Park, 19 Martello Street, London, E8 3PE
           </p>
 
           <p>
             <span class="has-text-weight-semibold">What’s occurring?</span>
-            Dancing and drinking. We will provide nibbles, cake and a glass of bubbles; if you want to buy dinner they serve your traditional pub fare at the bar (menu here).
+            Dancing and drinking. We will provide nibbles, cake and a glass of bubbles (if you're early enough!); if you want to buy dinner they serve your traditional pub fare at the bar <a href="http://pubonthepark.com/wp-content/uploads/2019/11/LATEST-DAILY-MENU-16.09.19.pdf" target="_blank">(menu here)</a>
           </p>
 
           <p>
@@ -67,15 +52,20 @@
 
         </div>
       </div>
+      <div class="card-footer">
+        <div class="card-footer-item">
+          There is a minimum spend for us on the bar so...
+          <span class="has-text-weight-semibold" :key="word" v-for="word in ['Bring','Your','Drinking','Shoes']">{{word}}. </span>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
-import { VBreakpoint } from 'vue-breakpoint-component'
 
 export default {
-  components: { VBreakpoint }
+  name: 'party'
 }
 </script>
 

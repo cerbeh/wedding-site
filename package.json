@@ -11,7 +11,6 @@
     "buefy": "^0.8.8",
     "core-js": "^3.1.2",
     "vue": "^2.6.10",
-    "vue-breakpoint-component": "^1.2.6",
     "vue-router": "^3.0.6"
   },
   "devDependencies": {
