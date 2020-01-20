@@ -37,25 +37,17 @@
             <span class="has-text-weight-semibold">Parking:</span>
             There is very limited pay and display available in the surrounding area. If at all possible, please take public transport!
           </p>
-          <p>
-            <span class="has-text-weight-semibold">Buses:</span>
-            30, 55, N55, 254, 106, 236, 254, N254, 276, 277, 394, D6, W15
-          </p>
-          <p>
-            <span class="has-text-weight-semibold">Overground:</span>
-            Hackney Central, London Fields, Cambridge Heath
-          </p>
-          <p>
-            <span class="has-text-weight-semibold">Underground:</span>
-            Bethnal Green (central line), and then a 254, 106 or D6
-          </p>
+          <Transport />
 
         </div>
       </div>
       <div class="card-footer">
         <div class="card-footer-item">
           There is a minimum spend for us on the bar so...
-          <span class="has-text-weight-semibold" :key="word" v-for="word in ['Bring','Your','Drinking','Shoes']">{{word}}. </span>
+
+        </div>
+        <div class="card-footer-item">
+          <span class="has-text-weight-semibold">Bring your drinking shoes</span>
         </div>
       </div>
     </div>
@@ -63,9 +55,11 @@
 </template>
 
 <script>
+import Transport from '@/components/Transport'
 
 export default {
-  name: 'party'
+  name: 'party',
+  components: { Transport }
 }
 </script>
 

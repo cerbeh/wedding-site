@@ -30,8 +30,7 @@ export default {
     return {
       paragraph: [{
         content: [
-          'We\'ve grabbed the links for the local TravelPremierLodgeInn.',
-          'Also for anyone feeling extra specialfancy the East London Hotel.',
+          'We\'ve grabbed the links for the local TravelPremierLodgeInn or the East London Hotel.',
           'There will be plenty more in the area if these are not up to your taste!'
         ]
       }],
