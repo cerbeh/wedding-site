@@ -42,7 +42,7 @@ export default {
         {
           name: 'Mermaids',
           text: 'Working to raise awareness about gender nonconformity in children and young people amongst professionals and the general public, Mermaid campaign for the recognition of gender dysphoria in young people and call for improvements in professional services.',
-          imageLink: 'https://mermaidsuk.org.uk/assets/media/images/logo.png',
+          imageLink: 'https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Mermaids_UK.jpeg/220px-Mermaids_UK.jpeg',
           link: 'https://www.mermaidsuk.org.uk/'
         },
         {
