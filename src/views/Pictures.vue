@@ -1,0 +1,68 @@
+<template lang="html">
+  <div class="section">
+    <Uploader />
+    <hr />
+    <Images :urls="imageUrls" />
+    <b-notification ref="loader" v-if="next_cursor" :closable="false"/>
+  </div>
+
+</template>
+
+<script>
+import Images from '@/components/Images'
+import Uploader from '@/components/Uploader'
+
+export default {
+  name: 'pictures',
+  components: { Images, Uploader },
+  data() {
+    return {
+      imageUrls: [],
+      next_cursor: null,
+    }
+  },
+  async created() {
+    await this.loadPictures()
+  },
+  mounted() {
+    this.scroll();
+  },
+  methods: {
+    setState(data) {
+      this.imageUrls = this.imageUrls.concat(
+        data.resources.map(image => image.secure_url)
+      )
+      this.next_cursor = data.next_cursor || null
+    },
+
+    async loadPictures() {
+
+      const loadingComponent = this.$buefy.loading.open({
+        container: this.$refs.loader && this.$refs.loader.$el
+      });
+
+      try {
+        const { data } = await this.$http.get(`/pictures/${this.next_cursor ? this.next_cursor : ''}`);
+        this.setState(data);
+        loadingComponent.close();
+      } catch (e) {
+        loadingComponent.close();
+        this.$buefy.toast.open({
+          message: 'Error receiving images!',
+          type: 'is-danger'
+        })
+      }
+    },
+
+    scroll() {
+      window.onscroll = () => {
+        let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
+        if (bottomOfWindow && this.next_cursor) this.loadPictures()
+      };
+    }
+  }
+}
+</script>
+
+<style lang="css" scoped>
+</style>
