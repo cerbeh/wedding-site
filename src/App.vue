@@ -28,10 +28,13 @@ export default {
       activeView: 0,
       views: [
         'home',
+        /*
         'ceremony',
+        'accomodation',
         'party',
+        */
         'charities',
-        'accomodation'
+        'pictures'
       ]
     }
   },

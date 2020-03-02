@@ -13,7 +13,8 @@ const routes = [
       ceremony: () => import('@/views/Ceremony.vue'),
       party: () => import('@/views/Party.vue'),
       charities: () => import('@/views/Charities.vue'),
-      accomodation: () => import('@/views/Accomodation.vue')
+      accomodation: () => import('@/views/Accomodation.vue'),
+      pictures: () => import('@/views/Pictures.vue'),
     }
   }
 ]
