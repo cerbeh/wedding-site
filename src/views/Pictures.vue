@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="section">
-    <Uploader />
+    <Uploader @image-uploaded="addNewImage" />
     <hr />
     <Images :urls="imageUrls" />
     <b-notification ref="loader" v-if="next_cursor" :closable="false"/>
@@ -28,6 +28,9 @@ export default {
     this.scroll();
   },
   methods: {
+    addNewImage(info) {
+      this.imageUrls.unshift(info.secure_url);
+    },
     setState(data) {
       this.imageUrls = this.imageUrls.concat(
         data.resources.map(image => image.secure_url)

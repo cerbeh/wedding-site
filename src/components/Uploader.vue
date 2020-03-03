@@ -19,6 +19,7 @@ export default {
           message: 'Image uploaded successfully!',
           type: 'is-success'
         })
+        this.$emit('image-uploaded', result.info);
       }
     })
   },
