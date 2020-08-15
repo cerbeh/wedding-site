@@ -45,7 +45,7 @@ export default {
       });
 
       try {
-        const { data } = await this.$http.get(`/pictures/${this.next_cursor ? this.next_cursor : ''}`);
+        const { data } = await this.$http.get(`/pictures${this.urlExtension}`);
         this.setState(data);
         loadingComponent.close();
       } catch (e) {
@@ -56,6 +56,12 @@ export default {
         })
       }
     },
+
+    computed: {
+      urlExtension() {
+        return this.next_cursor ? `/${this.next_cursor}` : ''
+      }
+    }
 
     scroll() {
       window.onscroll = () => {
