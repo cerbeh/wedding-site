@@ -23,7 +23,10 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-
-tabs menu needs to be mobile responsive
-get scss hooked up so that we can get rid of the border in bulma card components
-home page needs to be redesigned so it can tower in mobile
+### Deployment to gh-pages
+```
+npm run build
+git add .
+git commit -m "running build"
+git subtree push --prefix dist origin gh-pages
+```
