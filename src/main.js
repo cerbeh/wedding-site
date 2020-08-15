@@ -8,7 +8,7 @@ const headers = {
   Accept: 'application/json',
   'Content-Type': 'application/json',
 };
-const baseURL = process.env.NODE_ENV === 'development' ? '/api' : 'https://martin.ruudlinssen.com/api';
+const baseURL = process.env.NODE_ENV === 'development' ? '/api' : 'https://martins-server.herokuapp.com/api';
 
 const $axios = axios.create({
   headers,
