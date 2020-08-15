@@ -61,7 +61,7 @@ export default {
       urlExtension() {
         return this.next_cursor ? `/${this.next_cursor}` : ''
       }
-    }
+    },
 
     scroll() {
       window.onscroll = () => {
