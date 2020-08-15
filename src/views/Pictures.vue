@@ -57,19 +57,18 @@ export default {
       }
     },
 
-    computed: {
-      urlExtension() {
-        return this.next_cursor ? `/${this.next_cursor}` : ''
-      }
-    },
-
     scroll() {
       window.onscroll = () => {
         let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
         if (bottomOfWindow && this.next_cursor) this.loadPictures()
       };
     }
-  }
+  },
+  computed: {
+    urlExtension() {
+      return this.next_cursor ? `/${this.next_cursor}` : ''
+    }
+  },
 }
 </script>
 
