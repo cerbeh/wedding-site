@@ -8,7 +8,7 @@ const headers = {
   Accept: 'application/json',
   'Content-Type': 'application/json',
 };
-const prodUrl = 'https://martins-server.herokuapp.com/api';
+const prodUrl = 'https://martins-server.herokuapp.com/api/wedding-pictures';
 const baseURL = process.env.NODE_ENV === 'development' ? '/api' : prodUrl;
 
 const $axios = axios.create({
